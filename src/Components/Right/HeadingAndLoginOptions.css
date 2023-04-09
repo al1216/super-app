@@ -1,0 +1,44 @@
+.heading {
+    font-family: 'Single Day', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.7rem;
+    line-height: 0%;
+    color: #72DB73;
+    margin-bottom: 1rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.emailLogin, .slash, .googleLogin {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1%;
+    color: #FFFFFF;
+}
+.emailLogin{
+    cursor: pointer;
+}
+
+.googleLogin{
+    cursor: pointer;
+}
+
+.slash{
+    color: #72DB73;
+}
+
+.content-right {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 139.69%;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}

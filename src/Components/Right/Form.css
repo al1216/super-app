@@ -1,0 +1,56 @@
+.form {
+    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.name,
+.username,
+.email,
+.mobileNumber {
+    border: #292929;
+    background-color: #292929;
+    width: 51.8rem;
+    height: 4rem;
+    box-sizing: content-box;
+    padding-left: 1.5rem;
+    color: #7C7C7C;
+}
+
+.warning1, .warning2,.warning3, .warning4, .warning5 {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.checkAndCondtions {
+    display: flex;
+    gap: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 139.69%;
+    letter-spacing: 0.02em;
+    color: #7C7C7C;
+}
+
+.checkbox{
+    cursor: pointer;
+}
+
+.btn-sign-up {
+    color: white;
+    width: 53.5rem;
+    height: 5.5rem;
+    background: #72DB73;
+    border-radius: 2.8rem;
+    border: #72DB73;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 108.69%;
+    letter-spacing: 0.02em;
+}
