@@ -1,13 +1,15 @@
 import './App.css';
-import NextPage from './Components/Category/Category.jsx';
+import Category from './Components/Category/Category.jsx';
 import Home from './Body.jsx';
+import Next from './Components/Next Page/Next.jsx';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <Routes>
       <Route path='/' element={<Home></Home>}></Route>
-      <Route path='/category' element ={<NextPage></NextPage>}></Route>
+      <Route path='/category' element ={<Category></Category>}></Route>
+      <Route path='/next' element ={<Next></Next>}></Route>
     </Routes>
   );
 }

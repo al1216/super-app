@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.category-selection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.left-category {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    padding: 8rem;
+}
+
+.genres-section{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.show-genre {
+    padding: 0.5rem;
+    box-sizing: content-box;
+    display: flex;
+    width: 16rem;
+    height: 5.2rem;
+    background: #148A08;
+    border-radius: 3.1rem;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+}
+
+.option, .close {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.51429rem;
+    line-height: 0%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.close{
+    color: #085C00;
+    cursor: pointer;
+}
+
+.right-category {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    padding-right: 12rem;
+    padding-top: 4.5rem;
+    gap: 1rem;
+}
+
+.row-1 {
+    display: flex;
+    gap: 2rem;
+}
+
+.row-2 {
+    display: flex;
+    gap: 2rem;
+}
+
+.row-3 {
+    display: flex;
+    gap: 2rem;
+}
+
+.card {
+    width: 22rem;
+    height: 19.5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    padding: 1rem;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.genre {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.6rem;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.action-img,
+.drama-img,
+.romance-img,
+.thriller-img,
+.western-img,
+.horror-img,
+.fantasy-img,
+.music-img,
+.fiction-img {
+    width: 22rem;
+    height: 11rem;
+    z-index: 1;
+}
+
+.action {
+    box-sizing: content-box;
+    background-color: #FF5209;
+    /* border: solid #11B800; */
+}
+
+.drama {
+    background-color: #D7A4FF;
+}
+
+.romance {
+    background-color: #148A08;
+}
+
+.thriller {
+    background-color: #84C2FF;
+}
+
+.western {
+    background-color: #902500;
+}
+
+.horror {
+    background-color: #7358FF;
+}
+
+.fantasy {
+    background-color: #FF4ADE;
+}
+
+.music {
+    background-color: #E61E32;
+}
+
+.fiction {
+    background-color: #6CD061;
+
+}
+
+.msgAndButton {
+    display: flex;
+    width: 52vw;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.error-msg {
+    margin-top: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    color: red;
+    padding-left: 1rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: red;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nextPage {
+    width: 15rem;
+    height: 3.6rem;
+    background: #148A08;
+    border-radius: 38.8571px;
+    border: #148A08;
+    color: white;
+}
