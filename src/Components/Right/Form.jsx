@@ -52,7 +52,7 @@ export default function Form() {
     if (name.trim().length >= 1 && username.trim().length >= 1 && 
     checkbox === true && isValidNumber(mobileNumber) && isValidEmail(email)){
       console.log("sucesss");
-      navigate(`/next`);
+      navigate(`/category`);
       
     }
     else{
