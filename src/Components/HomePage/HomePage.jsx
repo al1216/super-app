@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <LeftHomePage />
-      {/* <RightHomePage /> */}
+      <RightHomePage />
     </div>
   );
 }
