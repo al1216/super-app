@@ -66,7 +66,7 @@ function LeftHomePage() {
           </div>
         </div>
       </div>
-      {/* <div className="weather-card">
+      <div className="weather-card">
         <div className="dateAndTime">
           <p className="date">{info[5]}</p>
           <p className="time">{info[4]}</p>
@@ -96,7 +96,7 @@ function LeftHomePage() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
