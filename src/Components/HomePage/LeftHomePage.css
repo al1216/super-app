@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.left-homepage {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-card {
+    width: 70rem;
+    height: 50rem;
+    background-color: #5746EA;
+    box-sizing: content-box;
+    padding: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 3.3428rem;
+}
+
+.avatar {
+    width: 20rem;
+    height: 45rem;
+}
+
+.userAndGenre {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.user-profile,
+.name-profile,
+.email-profile,
+.username-profile {
+    background-color: #5746EA;
+    color: #FFFFFF;
+}
+
+.user-profile,
+.name-profile,
+.email-profile {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 0%;
+    letter-spacing: 0.02em;
+
+}
+
+.username-profile {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7rem;
+    line-height: 0%;
+    letter-spacing: 0.02em;
+}
+
+.genre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.show-genre {
+    cursor: pointer;
+    background-color: #9F94FF;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.dateAndTime {
+    display: flex;
+    width: 76.5rem;
+    height: 9rem;
+    background: #FF4ADE;
+    border-radius: 33.428px 33.428px 0px 0px;
+    box-sizing: content-box;
+    padding: 0rem;
+    justify-content: space-evenly;
+}
+
+.date,
+.time {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 0%;
+    letter-spacing: 0.02em;
+}
+
+.info {
+    display: flex;
+    box-sizing: content-box;
+    width: 76.5rem;
+    height: 9.5rem;
+    background: #101744;
+    border-radius: 0px 0px 33.428px 33.428px;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.line{
+    z-index: 1;
+    width: 0.1rem;
+    height: 5rem;
+}
+
+.season {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.season-name {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 139.69%;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.season-icon,
+.pressure-icon, .wind-icon, .humid-icon{
+    z-index: 1;
+}
+
+.season-icon {
+    width: 7rem;
+    height: 7rem;
+}
+
+.tempAndPressure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.temp {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 139.69%;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.pressureAndIcon {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.pressure-icon {
+    width: 1rem;
+    height: 3rem;
+}
+
+.pressure-value {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 139.69%;
+    color: #FFFFFF;
+}
+
+.windAndHumidity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wind-icon{
+    width: 4rem;
+    height: 3rem;
+}
+
+.wind {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.wind-value, .humid-value{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 139.69%;
+    color: #FFFFFF;
+}
+
+.wind-value{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.humid-value{
+    margin-top: 0;
+}
+
+.humid-icon {
+    width: 4rem;
+    height: 4rem;
+}
+
+.humidity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

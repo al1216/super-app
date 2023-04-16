@@ -51,13 +51,19 @@ export default function Form() {
 
     if (name.trim().length >= 1 && username.trim().length >= 1 && 
     checkbox === true && isValidNumber(mobileNumber) && isValidEmail(email)){
-      console.log("sucesss");
+      let userDetails = [name,username,email,mobileNumber];
+      if (!localStorage.getItem("userDetails")){
+        localStorage.setItem("userDetails",JSON.stringify(userDetails));
+      }
+      else{
+        localStorage.setItem("userDetails",JSON.stringify(userDetails));
+      }
+      
+      
       navigate(`/category`);
       
     }
     else{
-      console.log("failure");
-
       if (name.trim().length < 1) setWarning1(true);
       if (username.trim().length < 1) setWarning2(true);
       if (isValidEmail(email) === false) setWarning3(true);

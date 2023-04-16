@@ -63,14 +63,14 @@ function Category() {
   let onClick = () => {
     if (genre.length >= 3){
       setStatus('');
-      if (!localStorage.getItem("categoriesOfAllUsers")){
-        localStorage.setItem("categoriesOfAllUsers",JSON.stringify(genre));
+      if (!localStorage.getItem("categoriesOfUsers")){
+        localStorage.setItem("categoriesOfUsers",JSON.stringify(genre));
       }
       else{
-        localStorage.setItem("categoriesOfAllUsers",JSON.stringify(genre));
+        localStorage.setItem("categoriesOfUsers",JSON.stringify(genre));
       }
 
-      naviagte('/next');
+      naviagte('/homePage');
     }
     else{
       setStatus('Please select atleast 3 Genre');
