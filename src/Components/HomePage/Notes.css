@@ -1,0 +1,60 @@
+.notes-card {
+    width: 47rem;
+    height: 45rem;
+    background: #F1C75B;
+    border-radius: 1.9rem;
+    padding: 2rem;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.caption-notes {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 105.69%;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.content-notes {
+    word-wrap: break-word;
+}
+
+.content-goes-here {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 105.69%;
+    letter-spacing: 0.04em;
+    color: #000000;
+
+}
+
+textarea{
+    border: 0px F1C75B;
+    border-style: none;
+    background-color: #F1C75B;
+}
+
+.edit-icon {
+    width: 8rem;
+    height: 8rem;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 27.9rem;
+    cursor: pointer;
+}
+
+.pencil-icon {
+    z-index: 1;
+    width: 3.5rem;
+    height: 3.5rem;
+}

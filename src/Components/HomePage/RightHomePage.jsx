@@ -45,7 +45,6 @@ function RightHomePage() {
       let desc = d.articles[0].description;
       let urlImage = d.articles[0].urlToImage;
       let urlNews = d.articles[0].url;
-      console.log([title,desc,urlImage,urlNews]);
       setNews([title,desc,urlImage,urlNews]);
     }
     catch(err){

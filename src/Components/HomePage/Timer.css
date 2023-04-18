@@ -1,0 +1,87 @@
+.timer-card {
+    width: 94rem;
+    height: 27rem;
+    background: #1E2343;
+    border-radius: 19px;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: content-box;
+    align-items: center;
+}
+
+.feed-time {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 105.69%;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+.up-icon,
+.down-icon {
+    width: 2.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+}
+
+img {
+    z-index: 1;
+}
+
+.time-show {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.set-time {
+    display: flex;
+    gap: 2rem;
+}
+
+.wrapper-time {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.colon {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 5rem;
+    line-height: 105.69%;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    margin-top: 10rem;
+
+}
+
+.hours,
+.minutes,
+.seconds {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 105.69%;
+    letter-spacing: 0.04em;
+    color: #949494;
+}
+
+.start {
+    width: 43rem;
+    height: 4rem;
+    background: #FF6A6A;
+    border-radius: 2rem;
+    border: #FF6A6A;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 105.69%;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
