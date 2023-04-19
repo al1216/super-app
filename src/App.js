@@ -1,7 +1,7 @@
 import './App.css';
 import Category from './Components/Category/Category.jsx';
 import Home from './Body.jsx';
-import Next from './Components/Next Page/Next.jsx';
+import Browse from './Components/BrowsePage/Browse.jsx'
 import HomePage from './Components/HomePage/HomePage.jsx';
 import { Route, Routes } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ function App() {
       <Route path='/' element={<Home></Home>}></Route>
       <Route path='/category' element ={<Category></Category>}></Route>
       <Route path='/homePage' element ={<HomePage></HomePage>}></Route>
-      <Route path='/next' element={<Next></Next>}></Route>
+      <Route path='/browse' element={<Browse></Browse>}></Route>
     </Routes>
   );
 }

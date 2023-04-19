@@ -4,7 +4,7 @@ import './WeatherCard.css';
 
 export default function WeatherCard() {
   const api_key_weather = "4748cb98543c48d4b22132702231404";
-  const location = "London";
+  const location = "Chennai";
   let [info, setInfo] = useState([]);
   function tConvert (time) {
     // Check correct time format and split into components

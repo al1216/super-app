@@ -71,7 +71,7 @@ function RightHomePage() {
   };
 
   let browse = () => {
-    naviagte('/next')
+    naviagte('/browse')
   }
   return (
     <div className="news-card" onLoad={getWeather}>
