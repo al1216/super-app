@@ -1,0 +1,15 @@
+.upper-browse {
+    box-sizing: content-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3.5rem;
+}
+
+.avatar-1 {
+    cursor: pointer;
+    width: 8.1rem;
+    height: 8.1rem;
+    filter: drop-shadow(0px 2.52891px 2.02313px rgba(0, 0, 0, 0.31));
+    border-radius: 3.9rem;
+}

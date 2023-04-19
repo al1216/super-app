@@ -1,0 +1,35 @@
+.lower-browse {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    padding-left: 6rem;
+}
+
+.caption-browse {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 139.69%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.title-genre {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 139.69%;
+    letter-spacing: 0.02em;
+    color: #878787;
+}
+
+.movies-img{
+    display: flex;
+}
+
+.img-one-by-one{
+    width: 34.1rem;
+    height: 19.2rem;
+}
