@@ -5,7 +5,6 @@ import './WeatherCard.css';
 export default function WeatherCard() {
   const api_key_weather = "4748cb98543c48d4b22132702231404";
   const location = "London";
-  let weather_icon = "day/176.png";
   let [info, setInfo] = useState([]);
   function tConvert (time) {
     // Check correct time format and split into components
@@ -31,7 +30,22 @@ export default function WeatherCard() {
       let time = tConvert(timeAndDate[1]);
       let date = timeAndDate[0].substring(5).concat("-",timeAndDate[0].substring(0,4));
       let temp = d.current.temp_c;
-      let icon = d.current.condition.icon.substring(2);
+      let icon;
+      let h = new Date().getHours();
+      let isDayTime = h > 6 && h < 20;
+      response = await axios.get('https://www.weatherapi.com/docs/weather_conditions.json');
+      d = response.data;
+
+      if (isDayTime === true){
+        for(let i = 0; i < 47; i++){
+          if (d[i].day  === season) icon = `day/${d[i].icon}.png`;
+        }
+      }
+      else{
+        for(let i = 0; i < 47; i++){
+          if (d[i].night  === season) icon = `night/${d[i].icon}.png`;
+        }
+      }
       setInfo([season,wind,pressure,humid,time,date,temp,icon]);
       // console.log(info);
     } catch (err) {
@@ -47,7 +61,7 @@ export default function WeatherCard() {
       </div>
       <div className="info">
         <div className="season">
-          <img src={weather_icon} alt="" className="season-icon" />
+          <img src={info[7]} alt="" className="season-icon" />
           <p className="season-name">{info[0]}</p>
         </div>
         <img src="line.png" alt="" className="line" />

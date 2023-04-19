@@ -39,6 +39,7 @@ textarea{
     border: 0px F1C75B;
     border-style: none;
     background-color: #F1C75B;
+    resize: none;
 }
 
 .edit-icon {

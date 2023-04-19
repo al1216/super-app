@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import "./Timer.css";
 
 export default function Timer() {
@@ -9,10 +10,11 @@ export default function Timer() {
   let [activeHours, setActiveHours] = useState("00");
   let [activeMinutes, setActiveMinutes] = useState("00");
   let [activeSeconds, setActiveSeconds] = useState("00");
+  let [status, setStatus] = useState(false);
 
-  let totalSeconds, h, m , s;
-  totalSeconds = Number(hours) * 3600 + Number(minutes) * 60 + Number(seconds);
-
+  let h, m, s, totalMinutes;
+  let totalSeconds =
+    Number(hours) * 3600 + Number(minutes) * 60 + Number(seconds);
   let increment_hour = () => {
     let temp = Number(hours);
     temp++;
@@ -63,34 +65,54 @@ export default function Timer() {
     setActiveHours(hours);
     setActiveMinutes(minutes);
     setActiveSeconds(seconds);
+    setStatus(true);
     startTimer();
   };
 
+  function getZeroDigit(d) {
+    let temp = "0";
+    if (d <= 9) return temp.concat(d);
+    else return d;
+  }
+
   function startTimer() {
-    let interval = setInterval(()=>{
-        if (totalSeconds === 0) clearInterval(interval);
+    let interval = setInterval(() => {
+      if (totalSeconds <= 0) clearInterval(interval);
 
-        h = Math.floor(totalSeconds / 3600);
-        totalSeconds %= 3600;
-        m = Math.floor(totalSeconds / 60);
-        s = totalSeconds % 60;
+      totalMinutes = Math.floor(totalSeconds / 60);
+      h = Math.floor(totalMinutes / 60);
+      m = minutes = totalMinutes % 60;
+      s = totalSeconds % 60;
+      h = getZeroDigit(h);
+      m = getZeroDigit(m);
+      s = getZeroDigit(s);
+      setActiveHours(h);
+      setActiveMinutes(m);
+      setActiveSeconds(s);
 
-        // if (h <= 9) setActiveHours("0" + h);
-        // if (m <= 9) setActiveMinutes("0" + m);
-        // if (s <= 9) setActiveSeconds("0" + s);
-        // if (h >= 10) setActiveHours(h);
-        // if (h >= 10) setActiveMinutes(m);
-        // if (h >= 10) setActiveSeconds(s);
-        setActiveHours(h);
-        setActiveMinutes(m);
-        setActiveSeconds(s);
-        
-        totalSeconds--;
-    },1000)
+      totalSeconds--;
+    }, 1000);
   }
   return (
     <div className="timer-card">
       <div className="time-circle">
+        <div className="time-wrapper">
+          {status && (
+            <CountdownCircleTimer
+              isPlaying
+              size={220}
+              rotation="counterclockwise"
+              duration={totalSeconds+1}
+              colors="#FF6A6A"
+              colorsTime={[0]}
+              onComplete={() => {
+                let audio = new Audio("clock-ring.mp3");
+                audio.play();
+              }}
+              trailColor="#191E39"
+            ></CountdownCircleTimer>
+          )}
+        </div>
         <p className="feed-time">
           {activeHours}:{activeMinutes}:{activeSeconds}
         </p>

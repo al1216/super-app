@@ -6,7 +6,7 @@ export default function Next() {
   return (
     <>
     <div>Next Page</div>
-    <button onClick={() => navigate('/category')}>Back to category</button>
+    <button onClick={() => navigate('/homePage')}>Back to homepage</button>
     </>
   )
 }

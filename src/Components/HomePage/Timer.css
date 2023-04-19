@@ -9,6 +9,24 @@
     align-items: center;
 }
 
+.time-circle{
+    border-radius: 50%;
+    width: 25rem;
+    height: 25rem;
+    background: #191E39;
+    box-shadow: -3px -7px 16px rgba(95, 88, 88, 0.23), inset 0px 6px 26px rgba(0, 0, 0, 0.61);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+}
+
 .feed-time {
     font-family: 'Roboto';
     font-style: normal;
