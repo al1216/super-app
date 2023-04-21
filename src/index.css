@@ -7,7 +7,7 @@
 
 html {
     font-size: 62.5%;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
 }

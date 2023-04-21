@@ -3,6 +3,7 @@
     flex-direction: column;
     box-sizing: content-box;
     padding-left: 6rem;
+    padding-right: 2rem;
 }
 
 .caption-browse {
@@ -13,6 +14,8 @@
     line-height: 139.69%;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .title-genre {
@@ -27,9 +30,10 @@
 
 .movies-img{
     display: flex;
+    gap: 1rem;
 }
 
 .img-one-by-one{
     width: 34.1rem;
-    height: 19.2rem;
+    height: 25rem;
 }

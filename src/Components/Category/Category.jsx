@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Category.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+let allUrls = [];
 
 function Category() {
   let [genre, setGenre] = useState([]);
@@ -60,16 +63,63 @@ function Category() {
     });
   }, [genre, styling]);
 
-  let onClick = () => {
-    if (genre.length >= 3){
-      setStatus('');
-      if (!localStorage.getItem("categoriesOfUsers")){
-        localStorage.setItem("categoriesOfUsers",JSON.stringify(genre));
-      }
-      else{
-        localStorage.setItem("categoriesOfUsers",JSON.stringify(genre));
-      }
+  async function get(type) {
+    
+    if (type === "fiction") type = "mystery";
+    if (type === "music") type = "musical";
 
+    // console.log(type);
+    let img_urls = [];
+    const options = {
+      method: "GET",
+      url: "https://online-movie-database.p.rapidapi.com/title/v2/find",
+      params: {
+        title: "a",
+        titleType: "movie",
+        limit: "4",
+        sortArg: "moviemeter,asc",
+        genre: type,
+        releaseDateMin: "2022-01-01",
+        primaryLanguage: "en",
+      },
+      headers: {
+        "X-RapidAPI-Key": "7f5c171f84mshffbe479ac919af3p1a2dcdjsnb68948cc80f9",
+        "X-RapidAPI-Host": "online-movie-database.p.rapidapi.com",
+      },
+    };
+  
+    let response = await axios.request(options);
+    let d = response.data;
+    for (let i = 0; i < 4; i++) {
+      img_urls[i] = d.results[i].image.url;
+      // console.log(type,img_urls[i]);
+    }
+  
+    // console.log(img_urls);
+    return img_urls;
+  }
+
+  async function onLoad() {
+    console.log("entered");
+    for (let i = 0; i < genre.length; i++) {
+      allUrls[i] = await get(genre[i].toLowerCase());
+    }
+    for (let i = 0; i < genre.length; i++) {
+      console.log(genre[i]);
+      for (let j = 0; j < 4; j++) {
+        console.log(allUrls[i][j]);
+      }
+    }
+    //   console.log(allUrls);
+    console.log(allUrls);
+    localStorage.setItem("allUrls",JSON.stringify(allUrls));
+  }
+
+  async function onClick() {
+    if (genre.length >= 3){
+      onLoad();
+      setStatus('');
+      localStorage.setItem("categoriesOfUsers",JSON.stringify(genre));
       naviagte('/homePage');
     }
     else{

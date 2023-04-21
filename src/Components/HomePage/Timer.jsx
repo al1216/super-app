@@ -106,6 +106,7 @@ export default function Timer() {
               colors="#FF6A6A"
               colorsTime={[0]}
               onComplete={() => {
+                setStatus(false);
                 let audio = new Audio("clock-ring.mp3");
                 audio.play();
               }}
