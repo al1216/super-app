@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 function RightHomePage() {
   let naviagte = useNavigate();
   const api_key_news = "cc9872637464488daad0dd749a016dae";
+  const api_key_news_1 = "2JhTUUGT8osWEL3XVR8dJZu-OX5RKq6WMUTQab-rG0E";
   // const api_key_news = 'eb48da38f71b43adb91ed12f2ea452d3';
   const api_key_weather = "4748cb98543c48d4b22132702231404";
   const location = "Chennai";
@@ -49,22 +50,30 @@ function RightHomePage() {
 
   async function getNews() {
     try {
-      let response = await axios.get(
-        `https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&pageSize=2&apiKey=${api_key_news}`
-      );
-      let d = response.data;
-      let title = d.articles[0].title;
-      let desc = d.articles[0].description;
-      let urlImage = d.articles[0].urlToImage;
-      let urlNews = d.articles[0].url;
-      // var options = {
-      //   method: 'GET',
-      //   url: 'https://api.newscatcherapi.com/v2/search',
-      //   params: {q: 'Bitcoin', lang: 'en', sort_by: 'relevancy', page: '1'},
-      //   headers: {
-      //     'x-api-key': 'your_key_1'
-      //   }
-      // };
+      // let response = await axios.get(
+      //   `https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&pageSize=2&apiKey=${api_key_news}`
+      // );
+      // let d = response.data;
+      // let title = d.articles[0].title;
+      // let desc = d.articles[0].description;
+      // let urlImage = d.articles[0].urlToImage;
+      // let urlNews = d.articles[0].url;
+      let response, d, title, desc, urlImage, urlNews;
+      let options = {
+        method: 'GET',
+        url: 'https://api.newscatcherapi.com/v2/search',
+        params: {q: 'tech', lang: 'en', sort_by: 'relevancy', 
+        page: '1', topic: "tech",page_size: '1'},
+        headers: {
+          'x-api-key': api_key_news_1
+        }
+      };
+      response = await axios.request(options);
+      d = response.data;
+      title = d.articles[0].title;
+      desc = d.articles[0].excerpt;
+      urlImage = d.articles[0].media;
+      urlNews = d.articles[0].link;
       setNews([title, desc, urlImage, urlNews]);
     } catch (err) {
       console.log(err);

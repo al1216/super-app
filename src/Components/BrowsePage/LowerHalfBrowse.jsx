@@ -5,7 +5,7 @@ let allUrls = JSON.parse(localStorage.getItem("allUrls"));
 let genre = JSON.parse(localStorage.getItem("categoriesOfUsers"));
 let arr = [];
 
-for(let i = 0; i < allUrls.length; i++){
+for(let i = 0; i < ((allUrls != null) && allUrls.length); i++){
     let obj = {};
     obj.key = genre[i];
     obj.urls = allUrls[i];

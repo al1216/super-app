@@ -111,7 +111,7 @@ function Category() {
       }
     }
     //   console.log(allUrls);
-    console.log(allUrls);
+    // console.log(allUrls);
     localStorage.setItem("allUrls",JSON.stringify(allUrls));
   }
 
