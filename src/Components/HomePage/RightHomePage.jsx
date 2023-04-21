@@ -57,6 +57,14 @@ function RightHomePage() {
       let desc = d.articles[0].description;
       let urlImage = d.articles[0].urlToImage;
       let urlNews = d.articles[0].url;
+      // var options = {
+      //   method: 'GET',
+      //   url: 'https://api.newscatcherapi.com/v2/search',
+      //   params: {q: 'Bitcoin', lang: 'en', sort_by: 'relevancy', page: '1'},
+      //   headers: {
+      //     'x-api-key': 'your_key_1'
+      //   }
+      // };
       setNews([title, desc, urlImage, urlNews]);
     } catch (err) {
       console.log(err);
