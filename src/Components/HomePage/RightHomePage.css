@@ -21,9 +21,8 @@
     background: rgba(0, 0, 0, 0.74);
     padding: 1rem;
     position: absolute;
-    top: 45.5rem;
+    top: 42rem;
     width: 44.3rem;
-    word-wrap: break-word;
 }
 
 .caption-news {
@@ -64,13 +63,14 @@
     padding: 2rem;
     padding-top: 0;
     box-sizing: content-box;
+    padding-bottom: 0;
 }
 
 .news-content {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 161.69%;
     text-align: justify;
     color: #272727;

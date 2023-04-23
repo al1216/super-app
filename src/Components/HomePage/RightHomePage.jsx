@@ -85,7 +85,8 @@ function RightHomePage() {
   }, [info]);
 
   let onClick = () => {
-    window.open(news[3], "_blank");
+    // window.open(news[3], "_blank");
+    window.open("https://www.livescience.com/23359-mount-everest.html", "_blank");
   };
 
   let browse = () => {
@@ -94,16 +95,16 @@ function RightHomePage() {
   return (
     <div className="news-card" onLoad={getWeather}>
       <div className="news-image" onClick={() => onClick()}>
-        <img src={news[2]} alt="" className="img" />
+        <img src="mountain.png" alt="" className="img" />
       </div>
       <div className="news-overview-caption" onClick={() => onClick()}>
-        <p className="caption-news">{news[0]}</p>
+        <p className="caption-news">Want to climb Mount <br /> Everest?</p>
         <p className="dateTime">
-          {info[1]} | {info[0]}
+        2-20-2023 | 07:35 PM
         </p>
       </div>
       <div className="news-overview" onClick={() => onClick()}>
-        <p className="news-content">{news[1]}</p>
+        <p className="news-content">In the years since human beings first reached the summit of Mount Everest in 1953, climbing the world’s highest mountain has changed dramatically. Today, hundreds of mountaineers manage the feat each year thanks to improvements in knowledge, technology, and the significant infrastructure provided by commercially guided expeditions that provide a veritable highway up the mountain for those willing to accept both the......</p>
       </div>
       <div className="wrapper-browse">
         <button className="browse" onClick={() => browse()}>Browse</button>
