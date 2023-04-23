@@ -63,9 +63,9 @@ function RightHomePage() {
         method: 'GET',
         url: 'https://api.newscatcherapi.com/v2/search',
         params: {q: 'tech', lang: 'en', sort_by: 'relevancy', 
-        page: '1', topic: "tech",page_size: '1'},
+        page: '1', topic: "tech", page_size: '1'},
         headers: {
-          'x-api-key': api_key_news_1
+          'x-api-key': 'vq58EOTGRSPHmNaYYACSLm93Hu_ilkW8oV0DDQKui-E'
         }
       };
       response = await axios.request(options);
